@@ -1,0 +1,486 @@
+import 'package:flutter/material.dart';
+
+// import 'next.dart';
+//import 'package:flutter_application_1/next_page.dart';
+
+void main() {
+  runApp(
+    MaterialApp(
+      //Ficam as configurações
+      title: 'App Treino',
+      home: HomePage(),
+      debugShowCheckedModeBanner: false,
+    ),
+  );
+} //executa o app
+
+class HomePage extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+    return Scaffold(
+      appBar: AppBar(
+        title: const Text('Aplicativo de treino'),
+        // actions: [
+        //   IconButton(
+        //     onPressed: () {
+        //       Navigator.of(context).push(
+        //         MaterialPageRoute(
+        //           builder: (context) {
+        //             return const NextPage();
+        //           },
+        //         ),
+        //       );
+        //     },
+        //     icon: const Icon(
+        //       Icons.keyboard_arrow_right,
+        //       size: 40,
+        //     ),
+        //   ),
+        // ],
+        backgroundColor: Colors.blue,
+        shadowColor: Colors.red,
+      ),
+      body: SingleChildScrollView(
+        child: Column(
+          children: [
+            Container(
+              // height: 200,
+              // width: 300, com o padding e a margin adicionada pode se tirar o width
+              padding: const EdgeInsets.symmetric(
+                horizontal: 16,
+                vertical: 40,
+              ), //espaçamento dentro do container
+              margin:
+                  const EdgeInsets.all(16), //espacamento para fora do contaier
+              decoration: BoxDecoration(
+                color: Color.fromARGB(58, 207, 178, 175),
+                borderRadius: BorderRadius.circular(30),
+                boxShadow: [
+                  BoxShadow(
+                    color: Color.fromARGB(255, 19, 68, 173),
+                    // blurRadius: 2,
+                    spreadRadius: 10,
+                    offset: Offset(2, 8),
+                  ),
+                ],
+              ),
+              //sempre precisa passar um box decoration com um valor
+              child: Column(
+                mainAxisAlignment: MainAxisAlignment
+                    .center, //Eixo principal esse parametro existe tanto na coluna quanto na row
+                crossAxisAlignment:
+                    CrossAxisAlignment.start, //Eixo secundário da coluna
+                children: [
+                  Padding(
+                    padding: const EdgeInsets.only(
+                      left: 25,
+                    ),
+                    child: const Text(
+                      '1 Feb 2022',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.w500,
+                        color: Color.fromARGB(255, 97, 10, 4),
+                      ),
+                    ),
+                  ),
+                  const SizedBox(height: 15),
+                  Row(
+                    children: const [
+                      Icon(
+                        Icons.sunny,
+                        size: 35,
+                        color: Colors.white,
+                      ),
+                      SizedBox(width: 15),
+                      Text(
+                        'Cloudy',
+                        style: TextStyle(
+                          fontSize: 24,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ],
+                  ),
+                  const SizedBox(height: 10),
+                  Row(
+                    mainAxisAlignment: MainAxisAlignment
+                        .spaceAround, //da o espaçamento entre os itens da row
+                    children: [
+                      Column(
+                        children: const [
+                          Text(
+                            '26° C',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 15),
+                          SizedBox(width: 10),
+                          Text(
+                            'Indoor temp ',
+                            style: TextStyle(
+                              color: Colors.orange,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Text(
+                            '26° C',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 15),
+                          SizedBox(width: 10),
+                          Text(
+                            'Indoor temp ',
+                            style: TextStyle(
+                              color: Colors.orange,
+                            ),
+                          ),
+                        ],
+                      ),
+                      Column(
+                        children: const [
+                          Text(
+                            '35° C',
+                            style: TextStyle(
+                              fontSize: 18,
+                              fontWeight: FontWeight.bold,
+                            ),
+                          ),
+                          SizedBox(height: 15),
+                          SizedBox(width: 10),
+                          Text(
+                            'Indoor temp ',
+                            style: TextStyle(
+                              color: Colors.orange,
+                            ),
+                          ),
+                        ],
+                      ),
+                    ],
+                  ),
+                ],
+              ),
+            ),
+            const SizedBox(
+              height: 40,
+            ),
+            SizedBox(
+              height: 50,
+              child: ListView(
+                scrollDirection: Axis.horizontal,
+                padding: const EdgeInsets.only(left: 16),
+                children: const [
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Living Room',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Living Room',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Living Room',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Living Room',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: EdgeInsets.all(8.0),
+                    child: Text(
+                      'Living Room',
+                      style: TextStyle(
+                        fontSize: 18,
+                        fontWeight: FontWeight.bold,
+                      ),
+                    ),
+                  ),
+                ],
+              ),
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  // height: 200,
+                  width: 175,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 30,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(32),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blueGrey.shade50,
+                        blurRadius: 10,
+                        spreadRadius: 3,
+                      )
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 30,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: const [
+                            Icon(
+                              Icons.light,
+                              size: 40,
+                            ),
+                            Icon(Icons.circle)
+                          ],
+                        ),
+                        const SizedBox(height: 25),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Lamp',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Opened',
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  // height: 200,
+                  width: 175,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 30,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(32),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blueGrey.shade50,
+                        blurRadius: 10,
+                        spreadRadius: 3,
+                      )
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 30,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: const [
+                            Icon(
+                              Icons.light,
+                              size: 40,
+                            ),
+                            Icon(Icons.circle)
+                          ],
+                        ),
+                        const SizedBox(height: 25),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Lamp',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Opened',
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                        const SizedBox(height: 25)
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+            Row(
+              mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+              children: [
+                Container(
+                  // height: 200,
+                  width: 175,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 30,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(32),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blueGrey.shade50,
+                        blurRadius: 10,
+                        spreadRadius: 3,
+                      )
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 30,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: const [
+                            Icon(
+                              Icons.light,
+                              size: 40,
+                            ),
+                            Icon(Icons.circle)
+                          ],
+                        ),
+                        const SizedBox(height: 25),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Lamp',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Opened',
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+                Container(
+                  // height: 200,
+                  width: 175,
+                  padding: const EdgeInsets.symmetric(
+                    horizontal: 10,
+                    vertical: 30,
+                  ),
+                  decoration: BoxDecoration(
+                    color: Colors.white,
+                    borderRadius: BorderRadius.circular(32),
+                    boxShadow: [
+                      BoxShadow(
+                        color: Colors.blueGrey.shade50,
+                        blurRadius: 10,
+                        spreadRadius: 3,
+                      )
+                    ],
+                  ),
+                  child: Padding(
+                    padding: const EdgeInsets.symmetric(
+                      horizontal: 10,
+                      vertical: 30,
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          mainAxisAlignment: MainAxisAlignment.spaceAround,
+                          children: const [
+                            Icon(
+                              Icons.light,
+                              size: 40,
+                            ),
+                            Icon(Icons.circle)
+                          ],
+                        ),
+                        const SizedBox(height: 25),
+                        Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: const [
+                            Text(
+                              'Lamp',
+                              style: TextStyle(
+                                fontSize: 20,
+                                fontWeight: FontWeight.bold,
+                              ),
+                            ),
+                            Text(
+                              'Opened',
+                              style: TextStyle(
+                                fontSize: 18,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ],
+        ),
+      ),
+    );
+  }
+}
